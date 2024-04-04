@@ -1,2 +1,2 @@
-.node_modules/*
-.dist/*
+/home/sketch/repos/Restaurant-Page/node_modules
+/home/sketch/repos/Restaurant-Page/dist
