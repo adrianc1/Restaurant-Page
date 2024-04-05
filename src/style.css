@@ -26,7 +26,6 @@ body {
     background-blend-mode: multiply;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
 }
 
 #header {
@@ -63,7 +62,7 @@ body {
 }
 
 #content {
-    height: 100%;
+    height: auto;
     width: 100%;
     margin-top: 10px;
     text-align: center;
@@ -112,4 +111,19 @@ body {
     justify-content: space-around;
     align-items: start;
     list-style: none;
+}
+
+#menu-title {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 2rem;
+}
+
+#name {
+    font-family: 'TitleFont';
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
