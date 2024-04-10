@@ -1,22 +1,6 @@
-export default function pageLoad() {
-    const nav = document.getElementById('nav');
-    let navArray = ["Home", "Menu", "About", "Contact Us"];
+export default function homePageLoad() {
     let node;
     let textNode;
-
-/* Nav Bar list Items and Append to Document*/
-    const navList = document.createElement('ul');
-    navList.setAttribute('id', 'nav-list')
-    let content = document.getElementById('content');
-
-    for(let i =0; i < navArray.length; i++) {
-        const node = document.createElement('li');
-        node.setAttribute('class', 'nav-list-items')
-        textNode = document.createTextNode(navArray[i]);
-        node.appendChild(textNode)
-        navList.appendChild(node);
-    }
-    nav.appendChild(navList);
 
     /* appending title to content container */
     const h1 = document.createElement('h1');
@@ -64,5 +48,6 @@ export default function pageLoad() {
 
     messageContainer.appendChild(para);
 
-    mainContent.appendChild(messageContainer)
+    mainContent.appendChild(messageContainer);
 }
+

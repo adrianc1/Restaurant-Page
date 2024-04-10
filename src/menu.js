@@ -1,10 +1,12 @@
 import dish from './dish.jpg';
 
 export default function menuLoad(){ 
+    /* variables and constants */
     const menuTitle = document.createElement('h1');
     const itemTitle = document.createElement('h3');
     const itemPrice = document.createElement('h3');
     const titleContainer = document.createElement('div')
+    const menuContainer = document.createElement('div');
 
     const header = document.getElementById('header');
     const content = document.getElementById('content');
@@ -13,11 +15,12 @@ export default function menuLoad(){
     let textNode;
     let textNode2;
 
+    /* create image element */
     const newImg = new Image();
     newImg.src = dish;
     newImg.setAttribute('id', 'img-container')
     
-
+/* Menu object with items and price */
     const menuObj = {
         "Cerebrum Consommé": "$45.99",
         "Sciticas' Bouillabaisse": "$143.56",
@@ -26,24 +29,27 @@ export default function menuLoad(){
         "Alicorn Elixir Linguine": "$99.83",
 
     }
-
+/* set attributes for elements */
     menuTitle.setAttribute('id', 'menu-title');
     header.setAttribute('id', 'name')
     itemPrice.setAttribute('id', 'item-price');
     itemTitle.setAttribute('id', 'item-title');
-    titleContainer.setAttribute('id', 'title-container')
+    titleContainer.setAttribute('id', 'title-container');
+    menuContainer.setAttribute('id', 'menu-container');
 
+    /* assign text to elements */
     header.innerHTML = "Adriano's Cocktails & Bites"
     menuTitle.innerHTML = 'Menu'
     itemPrice.innerHTML = 'Price';
     itemTitle.innerHTML = "Item"
 
+    /* appending to the page */
     titleContainer.appendChild(itemTitle);
     titleContainer.appendChild(itemPrice);
     content.appendChild(menuTitle);
     content.appendChild(titleContainer);
     
-
+/* loop over the menu object and add item and price */
     Object.keys(menuObj).forEach(key => {
         const price = menuObj[key];
         let li = document.createElement('li');
@@ -61,7 +67,8 @@ export default function menuLoad(){
         console.log(`Key: ${key}, value: ${price}`)
     });
 
-    itemTitle.appendChild(ul); 
-    itemPrice.appendChild(ul2);
+    menuContainer.appendChild(ul);
+    menuContainer.appendChild(ul2)
+    content.appendChild(menuContainer);
     content.appendChild(newImg);
 }

@@ -1,6 +1,18 @@
 import './style.css';
-import pageLoad from './init.js';
-import menuLoad from './menu.js'
-menuLoad();
+import homePageLoad from './init.js';
+import menuLoad from './menu.js';
+import clearPage from './clear.js';
+import navLoad from './nav.js';
 
-console.log('hey does this work?!')
+navLoad();
+homePageLoad();
+
+    const btns = document.querySelectorAll('.btn');
+
+    btns.forEach((btn) => {
+        if (btn.innerHTML === "Home") {
+            console.log('yes')
+        } else {
+            console.log('nah')
+        }
+    })
