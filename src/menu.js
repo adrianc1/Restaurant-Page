@@ -8,7 +8,7 @@ export default function menuLoad(){
     const titleContainer = document.createElement('div')
     const menuContainer = document.createElement('div');
 
-    const header = document.getElementById('header');
+/*     const header = document.getElementById('header'); */
     const content = document.getElementById('content');
     const ul = document.createElement('ul');
     const ul2 = document.createElement('ul');
@@ -31,14 +31,13 @@ export default function menuLoad(){
     }
 /* set attributes for elements */
     menuTitle.setAttribute('id', 'menu-title');
-    header.setAttribute('id', 'name')
     itemPrice.setAttribute('id', 'item-price');
     itemTitle.setAttribute('id', 'item-title');
     titleContainer.setAttribute('id', 'title-container');
     menuContainer.setAttribute('id', 'menu-container');
 
     /* assign text to elements */
-    header.innerHTML = "Adriano's Cocktails & Bites"
+   
     menuTitle.innerHTML = 'Menu'
     itemPrice.innerHTML = 'Price';
     itemTitle.innerHTML = "Item"
